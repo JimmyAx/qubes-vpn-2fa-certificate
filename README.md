@@ -19,7 +19,7 @@ on a USB stick.
 
  * Copy ``00-2fa-usb.conf`` to ``/rw/config/qubes-vpn-handler.service.d``.
  * Copy ``prepare-vpn-usb.sh`` to ``/rw/config``.
- * Restart the ProxyVM or restart the VPN service.be
+ * Restart the ProxyVM or restart the VPN service.
 
 ## Usage
 
@@ -44,6 +44,6 @@ store the passwords in for the VPN service.
 ## Known issues
 
  * The VPN service appears to be failing to connect the very first time it
-   starts, even if the correct credentials are entered. It will sucecssfully
+   starts, even if the correct credentials are entered. It will successfully
    connect once systemd automatically restarts it (usually happens after a
    few seconds). Patches are welcome.
