@@ -36,6 +36,7 @@ if [ ! -e /tmp/vpn-ramdisk/key-pass.txt ]; then
   read -s -r -p "Key password: " keypassword
   echo
   touch /tmp/vpn-ramdisk/key-pass.txt
+  chown root:root /tmp/vpn-ramdisk/key-pass.txt
   chmod 0600 /tmp/vpn-ramdisk/key-pass.txt
   cat <<< "$keypassword" > /tmp/vpn-ramdisk/key-pass.txt
 fi
@@ -45,6 +46,7 @@ if [ ! -e /tmp/vpn-ramdisk/userpassword.txt ]; then
   read -s -r -p "Password: " upassword
   echo
   touch /tmp/vpn-ramdisk/userpassword.txt
+  chown root:root /tmp/vpn-ramdisk/userpassword.txt
   chmod 0600 /tmp/vpn-ramdisk/userpassword.txt
   cat <<< "$username" > /tmp/vpn-ramdisk/userpassword.txt
   cat <<< "$upassword" >> /tmp/vpn-ramdisk/userpassword.txt
